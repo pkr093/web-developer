@@ -1,0 +1,40 @@
+extends base.pug
+
+block scripts 
+    script(src='/static/index.js')
+
+block style 
+    style 
+        include ../static/crudstyle.css
+
+block content
+    form(action="/crud", method="post" class="myForm")
+        input(type="text" class="Inp" name="city1") 
+        input(type="text" class="Inp" name="city2") 
+        button(type="submit" class="btn" onclick="myFunction()") 
+            | submit
+
+    a(href='/getdetails') Get Details
+    a(href='/getremove' onclick="myFunction2()")  Get Remove
+    table(style='width:100%', border='1' class="myTable")
+        thead 
+            tr
+                th Id
+                th Name
+                th Age
+             
+        tbody
+            tr 
+                td 00
+                td silicon valley
+                td newyork   
+        each detail in details ? details : []       
+            tr 
+                td 00
+                td #{detail.city1}
+                td #{detail.city2}
+               
+                
+    
+        
+        

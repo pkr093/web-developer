@@ -1,0 +1,15 @@
+
+.myForm {
+    background-color: aquamarine;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Inp{
+    margin: 0 10px;
+}
+
+.myTable{
+    margin-top: 10px;
+}
